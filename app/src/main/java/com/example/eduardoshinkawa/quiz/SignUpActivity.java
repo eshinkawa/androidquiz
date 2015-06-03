@@ -55,7 +55,7 @@ public class SignUpActivity extends Activity {
                 final String user = username.getText().toString();
                 final String pass = password.getText().toString();
                 final String usu = usuario.getText().toString();
-                final Firebase ref = new Firebase("https://brilliant-fire-3725.firebaseio.com/");
+                final Firebase ref = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/");
                 Propriedades.username = username.getText().toString();
                 ref.authWithPassword(user, pass,
                         new Firebase.AuthResultHandler() {
