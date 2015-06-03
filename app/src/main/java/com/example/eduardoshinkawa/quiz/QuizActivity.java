@@ -72,7 +72,7 @@ public class QuizActivity extends Activity {
     public void carregaPergunta(){
 
         final TextView perguntaquiz = (TextView) findViewById(R.id.perguntaquiz);
-        final RadioButton resposta1 = (RadioButton) findViewById(R.id.resposta1);
+        final RadioButton resposta1 = (RadioButton) faindViewById(R.id.resposta1);
         final RadioButton resposta2 = (RadioButton) findViewById(R.id.resposta2);
         final RadioButton resposta3 = (RadioButton) findViewById(R.id.resposta3);
         final RadioButton resposta4 = (RadioButton) findViewById(R.id.resposta4);
@@ -86,12 +86,12 @@ public class QuizActivity extends Activity {
 
 
 
-                final Firebase resp1 = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/" + perguntaId + "/respostas/0/correto");
-                final Firebase resp2 = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/" + perguntaId + "/respostas/1/correto");
-                final Firebase resp3 = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/" + perguntaId + "/respostas/2/correto");
-                final Firebase resp4 = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/" + perguntaId + "/respostas/3/correto");
+                final Firebase resp1 = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/" + perguntaId + "/respostas/0/correto");
+                final Firebase resp2 = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/" + perguntaId + "/respostas/1/correto");
+                final Firebase resp3 = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/" + perguntaId + "/respostas/2/correto");
+                final Firebase resp4 = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/" + perguntaId + "/respostas/3/correto");
 
-                final Firebase arrayQuestions = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/");
+                final Firebase arrayQuestions = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/");
 
                 if (resposta1.isChecked()) {
                     resp1.addValueEventListener(new ValueEventListener() {
@@ -202,7 +202,7 @@ public class QuizActivity extends Activity {
 
                     //Toast.makeText(getApplicationContext(), "Você acertou " + acertos + " perguntas",
                     //        Toast.LENGTH_LONG).show();
-                    final Firebase leaderboard = new Firebase("https://brilliant-fire-3725.firebaseio.com/leaderboard/");
+                    final Firebase leaderboard = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/leaderboard/");
 
                     Intent i = new Intent(QuizActivity.this, Leaderboard.class);
 
@@ -216,7 +216,7 @@ public class QuizActivity extends Activity {
         });
 
 
-        Firebase ref = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/" + perguntaId + "/pergunta");
+        Firebase ref = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/" + perguntaId + "/pergunta");
 
         ref.addValueEventListener(new ValueEventListener() {
 
@@ -229,7 +229,7 @@ public class QuizActivity extends Activity {
 
         });
 
-        Firebase ref1 = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/" + perguntaId + "/respostas/0/resposta");
+        Firebase ref1 = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/" + perguntaId + "/respostas/0/resposta");
 
         ref1.addValueEventListener(new ValueEventListener() {
 
@@ -242,7 +242,7 @@ public class QuizActivity extends Activity {
 
         });
 
-        Firebase ref2 = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/" + perguntaId + "/respostas/1/resposta");
+        Firebase ref2 = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/" + perguntaId + "/respostas/1/resposta");
 
         ref2.addValueEventListener(new ValueEventListener() {
 
@@ -255,7 +255,7 @@ public class QuizActivity extends Activity {
 
         });
 
-        Firebase ref3 = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/" + perguntaId + "/respostas/2/resposta");
+        Firebase ref3 = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/" + perguntaId + "/respostas/2/resposta");
 
         ref3.addValueEventListener(new ValueEventListener() {
 
@@ -268,7 +268,7 @@ public class QuizActivity extends Activity {
 
         });
 
-        Firebase ref4 = new Firebase("https://brilliant-fire-3725.firebaseio.com/questions/" + perguntaId + "/respostas/3/resposta");
+        Firebase ref4 = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/questions/" + perguntaId + "/respostas/3/resposta");
 
         ref4.addValueEventListener(new ValueEventListener() {
 
