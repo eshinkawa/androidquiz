@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Quiz</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <color name="blue">#3399FF</color>
+    <color name="white">#FFF</color>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="title_activity_leaderboard">Leaderboard</string>
+</resources>
