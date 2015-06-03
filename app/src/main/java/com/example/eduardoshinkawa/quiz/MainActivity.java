@@ -52,14 +52,14 @@ public class MainActivity extends Activity {
         buttonLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                mRef = new Firebase("https://brilliant-fire-3725.firebaseio.com/");
+                mRef = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/");
 
                 Firebase.AuthResultHandler authResultHandler = new Firebase.AuthResultHandler() {
                     @Override
                     public void onAuthenticated(AuthData authData) {
                         // Authenticated successfully with payload authData
 
-                        mRef = new Firebase("https://brilliant-fire-3725.firebaseio.com/usuario/" + authData.getUid().toString() + "/alias");
+                        mRef = new Firebase("https://<YOUR-FIREBASE-URL>.firebaseio.com/usuario/" + authData.getUid().toString() + "/alias");
 
                         mRef.addValueEventListener(new ValueEventListener() {
                             @Override
