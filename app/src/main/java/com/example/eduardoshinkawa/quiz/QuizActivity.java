@@ -72,7 +72,7 @@ public class QuizActivity extends Activity {
     public void carregaPergunta(){
 
         final TextView perguntaquiz = (TextView) findViewById(R.id.perguntaquiz);
-        final RadioButton resposta1 = (RadioButton) faindViewById(R.id.resposta1);
+        final RadioButton resposta1 = (RadioButton) findViewById(R.id.resposta1);
         final RadioButton resposta2 = (RadioButton) findViewById(R.id.resposta2);
         final RadioButton resposta3 = (RadioButton) findViewById(R.id.resposta3);
         final RadioButton resposta4 = (RadioButton) findViewById(R.id.resposta4);
